@@ -6,6 +6,19 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
+var screenSize = window.matchMedia("(max-width: 900px)");
+
+if(screenSize.matches){
+    $(document).click(function(){
+
+        if(!started){
+            $("#level-title").text("Level " + level);
+            nextSequence();
+            started=true;
+        }
+    });
+}
+
 $(document).keypress(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
