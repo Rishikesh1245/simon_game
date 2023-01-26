@@ -9,7 +9,8 @@ var level = 0;
 var screenSize = window.matchMedia("(max-width: 900px)");
 
 if(screenSize.matches){
-    $(document).click(function(){
+    $(".mobile").disabled = false;
+    $(".mobile").click(function(){
 
         if(!started){
             $("#level-title").text("Level " + level);
@@ -17,6 +18,9 @@ if(screenSize.matches){
             started=true;
         }
     });
+}
+else{
+    $(".mobile").disabled = true;
 }
 
 $(document).keypress(function() {
