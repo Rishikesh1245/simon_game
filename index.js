@@ -10,7 +10,7 @@ var screenSize = window.matchMedia("(max-width: 900px)");
 
 if(screenSize.matches){
     $(".mobile").disabled = false;
-    $(document).click(function(){
+    $(body).click(function(){
 
         if(!started){
             $("#level-title").text("Level " + level);
