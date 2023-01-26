@@ -23,7 +23,7 @@ else{
     $(".mobile").disabled = true;
 }
 
-$(document).keypress(function() {
+$(".mobile").click(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
